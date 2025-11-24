@@ -51,8 +51,9 @@
       },
     },
     build: {
-      target: 'esnext',
-      outDir: 'build',
+    target: 'esnext',
+    // Vercel mặc định mong chờ thư mục output tên "dist"
+    outDir: 'dist',
     },
     server: {
       port: 3000,
