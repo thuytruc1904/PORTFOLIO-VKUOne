@@ -7,6 +7,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import walkthroughImage from "../assets/walkthrough.png";
 import mainImage from "../assets/main.png";
 import featureImage from "../assets/feature.png";
+import othersImage from "../assets/other.png";
 
 const screenGroups = [
   {
@@ -78,6 +79,10 @@ const screenGroups = [
         description: "Cài đặt"
       }
     ]
+  },
+  {
+    title: "Others screens",
+    screens: []
   }
 ];
 
@@ -99,7 +104,7 @@ export function AppScreensGallery() {
             color: '#223B73',
           }}
         >
-          Giao diện ứng dụng
+          GIAO DIỆN ỨNG DỤNG
         </motion.h2>
 
         <motion.p
@@ -126,16 +131,37 @@ export function AppScreensGallery() {
               transition={{ duration: 0.6, delay: groupIndex * 0.15 }}
             >
               {/* Group Title */}
-              <h3 
-                className="mb-8"
-                style={{
-                  fontSize: '20px',
-                  fontWeight: 600,
-                  color: '#223B73',
-                }}
+              <motion.h3 
+                className="mb-8 inline-flex items-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+                style={{ cursor: 'default' }}
               >
-                {group.title}
-              </h3>
+                <span
+                  className="inline-flex items-center gap-3 px-4 py-2 rounded-full"
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.8)',
+                    boxShadow: '0 6px 16px rgba(34,59,115,0.18)',
+                    border: '1px solid rgba(171,183,239,0.5)',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '18px',
+                      fontWeight: 600,
+                      color: '#223B73',
+                    }}
+                  >
+                    {group.title}
+                  </span>
+                  <span
+                    className="h-1 w-8 rounded-full"
+                    style={{ background: 'linear-gradient(90deg, #557EE0, #ABB7EF)' }}
+                  />
+                </span>
+              </motion.h3>
 
               {/* Screens Row */}
               {group.title === "Walkthrough screen" ? (
@@ -179,6 +205,21 @@ export function AppScreensGallery() {
                     <ImageWithFallback
                       src={featureImage}
                       alt="Features app screens"
+                      className="w-full h-auto object-contain bg-transparent"
+                    />
+                  </div>
+                </div>
+              ) : group.title === "Others screens" ? (
+                <div className="flex justify-center mt-12">
+                  <div
+                    className="rounded-[2rem] overflow-hidden"
+                    style={{
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <ImageWithFallback
+                      src={othersImage}
+                      alt="Others screens"
                       className="w-full h-auto object-contain bg-transparent"
                     />
                   </div>

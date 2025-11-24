@@ -5,33 +5,40 @@ import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Target, AlertCircle, Lightbulb } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import avaboy from "../assets/avaboy.jpg";
+import avagirl from "../assets/avagirl.jpg";
 
 const personas = [
   {
     name: "Nguyễn Minh Trung",
     major: "CNTT – Năm 3",
-    image: "https://images.unsplash.com/photo-1698356253803-838dceb68946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwc3R1ZGVudCUyMG1hbGUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM4NTk5MDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    goals: "Xem lịch nhanh, kiểm tra điểm, theo dõi thông báo học vụ một cách hiệu quả.",
+    image: avaboy,
+    goals:
+      "Theo dõi lịch học nhanh, kiểm tra điểm dễ dàng và cập nhật thông báo học vụ kịp thời trên điện thoại.",
     painPoints: [
-      "Thông báo học vụ rời rạc trên nhiều kênh",
-      "Lịch học thay đổi đột ngột khó cập nhật",
-      "Website trường trên mobile rất khó sử dụng"
+      "Thông báo học vụ nằm rải rác và phải đăng nhập lại để xem",
+      "Lịch học thay đổi nhưng không có nhắc nhở kịp thời",
+      "Website trường không tối ưu trên mobile, thao tác khó khăn"
     ],
-    insight: "Cần một ứng dụng \"tất cả trong một\" với giao diện nhanh, rõ ràng và dễ sử dụng."
+    insight:
+      "Trung cần một ứng dụng học vụ tập trung, đồng bộ và tối ưu cho điện thoại để tiết kiệm thời gian kiểm tra thông tin."
   },
   {
     name: "Trần Thu Hà",
     major: "Thiết kế – Năm 2",
-    image: "https://images.unsplash.com/photo-1709811240710-cff5f04deb44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwc3R1ZGVudCUyMGZlbWFsZSUyMHBvcnRyYWl0fGVufDF8fHx8MTc2Mzk2MTMwMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    goals: "Quản lý deadline đồ án, hỏi thông tin học vụ một cách nhanh chóng.",
+    image: avagirl,
+    goals:
+      "Quản lý deadline đồ án, tra cứu thông tin học vụ nhanh và biết rõ quy trình khi cần hỗ trợ.",
     painPoints: [
-      "Hay quên deadline nộp bài và thời hạn đăng ký",
-      "Không biết hỏi ai khi có thắc mắc học vụ",
-      "Khó tìm thông tin quy định và điều kiện tốt nghiệp"
+      "Dễ quên deadline vì không có hệ thống nhắc nhở",
+      "Không biết hỏi ai khi cần giải đáp học vụ",
+      "Tìm thông tin quy định và điều kiện tốt nghiệp mất thời gian"
     ],
-    insight: "Cần trợ lý AI để giải đáp thắc mắc và hệ thống reminder linh hoạt cho deadline."
+    insight:
+      "Hà cần trợ lý AI hỗ trợ trả lời học vụ, kèm hệ thống nhắc nhở linh hoạt để không bỏ lỡ deadline."
   }
 ];
+
 
 export function PersonasSection() {
   const ref = useRef(null);
@@ -51,7 +58,7 @@ export function PersonasSection() {
             color: '#223B73',
           }}
         >
-          Người dùng mục tiêu
+          NGƯỜI DÙNG MỤC TIÊU
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -67,13 +74,14 @@ export function PersonasSection() {
               }}
             >
               {/* Header with Avatar */}
-              <div className="flex items-start gap-5 mb-6">
+              <div className="flex items-start gap-5 mb-6 mt-2">
                 <ImageWithFallback
                   src={persona.image}
                   alt={persona.name}
                   className="w-20 h-20 rounded-full object-cover"
                   style={{
                     border: '3px solid #557EE0',
+                    objectPosition: 'center 20%',
                   }}
                 />
                 <div>

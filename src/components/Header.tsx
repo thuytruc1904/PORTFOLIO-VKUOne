@@ -2,7 +2,8 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useState, useEffect } from "react";
-import { Menu, X, Download, Smartphone } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
+import logoVKUOne from "../assets/logo-vkuone.png";
 
 const navItems = [
   { name: "Trang chủ", href: "#home" },
@@ -100,15 +101,11 @@ export function Header() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:shadow-lg"
-                  style={{
-                    background: "linear-gradient(135deg, #557EE0 0%, #8099E7 100%)",
-                    boxShadow: "0 4px 12px rgba(85, 126, 224, 0.3)",
-                  }}
-                >
-                  <Smartphone size={24} style={{ color: "white" }} />
-                </div>
+                <img
+                  src={logoVKUOne}
+                  alt="VKUOne app icon"
+                  className="h-12 w-auto block"
+                />
                 <div>
                   <h1
                     style={{

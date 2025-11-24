@@ -137,21 +137,24 @@ export function PrototypeCTASection() {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center"
                   >
-                    <motion.button
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="px-8 py-4 rounded-2xl flex items-center justify-center gap-3 transition-all"
-                      style={{
-                        backgroundColor: 'white',
-                        color: '#2F4F97',
-                        fontSize: '16px',
-                        fontWeight: 600,
-                        boxShadow: '0 8px 24px rgba(255, 255, 255, 0.2)',
-                      }}
-                    >
-                      <ExternalLink size={20} />
-                      View Figma Prototype
-                    </motion.button>
+                  <motion.a
+                    href="https://www.figma.com/proto/a47TaWl6D6BwLvh6LNlD7r/VKUOne?page-id=142%3A2416&node-id=672-6036&p=f&viewport=6375%2C3835%2C0.32&t=Q90xycpXb26kR4CN-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=672%3A6036"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="px-8 py-4 rounded-2xl flex items-center justify-center gap-3 transition-all"
+                    style={{
+                      backgroundColor: 'white',
+                      color: '#2F4F97',
+                      fontSize: '16px',
+                      fontWeight: 600,
+                      boxShadow: '0 8px 24px rgba(255, 255, 255, 0.2)',
+                    }}
+                  >
+                    <ExternalLink size={20} />
+                    View Figma Prototype
+                  </motion.a>
 
                     <motion.button
                       whileHover={{ scale: 1.05, y: -2 }}

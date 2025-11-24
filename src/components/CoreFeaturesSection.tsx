@@ -138,7 +138,7 @@ export function CoreFeaturesSection() {
             color: '#223B73',
           }}
         >
-          Tính năng nổi bật
+          TÍNH NĂNG NỔI BẬT
         </motion.h2>
 
         <motion.p

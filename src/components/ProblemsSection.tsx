@@ -8,18 +8,18 @@ import { Calendar, Bell, AlertTriangle } from "lucide-react";
 const problems = [
   {
     icon: Calendar,
-    title: "Lịch học không tập trung",
-    description: "Thông tin lịch học rời rạc trên nhiều nền tảng khác nhau, khó nhớ phòng học và thời gian.",
+    title: "Lịch học khó theo dõi",
+    description: "Lịch học chỉ xem được trên web và không có thông báo tự động. Sinh viên phải tự truy cập thủ công mỗi ngày để kiểm tra thay đổi.",
   },
   {
     icon: Bell,
-    title: "Thông báo từ nhiều kênh",
-    description: "Thông báo quan trọng đến từ email, Facebook, Zalo... dễ bỏ sót và không có ưu tiên rõ ràng.",
+    title: "Thông báo không đồng bộ",
+    description: "Thông báo xuất hiện trên nhiều nền tảng khác nhau, và mỗi lần xem trên web đều phải đăng nhập lại, gây bất tiện và dễ bỏ sót thông tin quan trọng.",
   },
   {
     icon: AlertTriangle,
-    title: "Đăng ký tín chỉ phức tạp",
-    description: "Không có công cụ kiểm tra trùng lịch, dẫn đến đăng ký sai môn hoặc xung đột thời khóa biểu.",
+    title: "Không tối ưu cho thiết bị di động",
+    description: "Cổng web không phù hợp với thiết bị di động, gây khó khăn trong việc sử dụng và theo dõi thông tin học tập.",
   },
 ];
 
@@ -41,10 +41,10 @@ export function ProblemsSection() {
             color: '#223B73',
           }}
         >
-          Những thách thức
+          NHỮNG THÁCH THỨC
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {problems.map((problem, index) => (
             <motion.div
               key={index}
@@ -52,7 +52,7 @@ export function ProblemsSection() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -8 }}
-              className="relative bg-white rounded-3xl p-8 transition-all duration-300"
+              className="relative bg-white rounded-3xl p-8 transition-all duration-300 text-center"
               style={{
                 border: '1px solid rgba(171, 183, 239, 0.4)',
                 boxShadow: '0 4px 20px rgba(34, 59, 115, 0.08)',
@@ -60,7 +60,7 @@ export function ProblemsSection() {
             >
               {/* Icon */}
               <div 
-                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto"
                 style={{
                   backgroundColor: 'rgba(128, 153, 231, 0.15)',
                 }}
@@ -75,7 +75,7 @@ export function ProblemsSection() {
               <h3 
                 className="mb-3"
                 style={{
-                  fontSize: '22px',
+                  fontSize: '20px',
                   fontWeight: 600,
                   color: '#223B73',
                 }}

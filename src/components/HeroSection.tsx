@@ -114,15 +114,15 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mb-10"
             style={{
-              fontSize: '18px',
+              fontSize: '20px',
               color: '#223B73',
               opacity: 0.8,
               lineHeight: 1.7,
-              maxWidth: '560px'
+              maxWidth: '560px',
+              textAlign: 'justify', // thêm dòng này để căn đều 2 bên
             }}
           >
-            Quản lý lịch học thông minh, nhận thông báo ưu tiên, đăng ký tín chỉ dễ dàng 
-            và trợ lý AI học vụ - tất cả trong một ứng dụng.
+            Theo dõi lịch học, nhận thông báo ưu tiên, đăng ký tín chỉ và quản lý học vụ dễ dàng hơn với hệ thống gợi ý thông minh và các công cụ hỗ trợ AI – tất cả được thiết kế để mang đến trải nghiệm học tập nhanh chóng, trực quan và cá nhân hóa cho sinh viên VKU.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -146,10 +146,13 @@ export function HeroSection() {
               Tải về ngay
             </motion.button>
 
-            <motion.button
+            <motion.a
+              href="https://drive.google.com/file/d/1nVi_lwqJaIxJd0WQSZrhqvJolDLg5s6q/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-2xl transition-all bg-white shadow-md hover:shadow-lg"
+              className="px-8 py-4 rounded-2xl transition-all bg-white shadow-md hover:shadow-lg inline-flex items-center justify-center"
               style={{
                 border: '2px solid #2F4F97',
                 color: '#2F4F97',
@@ -158,7 +161,7 @@ export function HeroSection() {
               }}
             >
               Xem demo
-            </motion.button>
+            </motion.a>
         </motion.div>
         </div>
       </div>

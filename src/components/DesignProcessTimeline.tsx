@@ -55,7 +55,7 @@ export function DesignProcessTimeline() {
             color: '#223B73',
           }}
         >
-          Quy trình thiết kế
+          QUY TRÌNH THIẾT KẾ
         </motion.h2>
 
         {/* Timeline Container */}

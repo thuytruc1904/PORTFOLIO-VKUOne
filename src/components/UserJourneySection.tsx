@@ -62,7 +62,7 @@ export function UserJourneySection() {
             color: '#223B73',
           }}
         >
-          Hành trình một ngày
+          HÀNH TRÌNH MỘT NGÀY
         </motion.h2>
 
         <motion.p

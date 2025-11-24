@@ -9,24 +9,25 @@ const solutions = [
   {
     icon: Calendar,
     title: "Lịch học thông minh",
-    description: "Tất cả lịch học tập trung một nơi, tự động đồng bộ, nhắc nhở đúng lúc với thông tin phòng học chi tiết.",
+    description: "Tập trung toàn bộ lịch học vào một nơi, hiển thị thay đổi rõ ràng và gửi nhắc nhở kịp thời cho từng buổi học.",
   },
   {
     icon: Bell,
-    title: "Notification ưu tiên",
-    description: "Phân loại thông báo theo mức độ quan trọng, không bỏ sót thông tin học tập và sự kiện quan trọng.",
+    title: "Thông báo ưu tiên",
+    description: "Thông báo được phân loại theo mức độ quan trọng và hiển thị ngay lập tức, không cần đăng nhập lại như trên web.",
   },
   {
     icon: CheckCircle,
-    title: "Đăng ký tín chỉ có cảnh báo",
-    description: "Kiểm tra trùng lịch tự động, gợi ý môn học phù hợp, giúp đăng ký tín chỉ nhanh chóng và chính xác.",
+    title: "Trải nghiệm mobile tối ưu",
+    description: "Giao diện học vụ được tối ưu cho điện thoại, thao tác nhanh, dễ dùng và thuận tiện hơn so với cổng web hiện tại.",
   },
   {
     icon: Sparkles,
     title: "Trợ lý AI học vụ",
-    description: "Chatbot thông minh trả lời mọi thắc mắc học vụ, quy định, điểm số và thông tin sinh viên 24/7.",
+    description: "AI hỗ trợ tra cứu học vụ, gợi ý tài liệu, giải đáp thắc mắc và phân tích kết quả học tập cho sinh viên 24/7.",
   },
 ];
+
 
 export function SolutionsSection() {
   const ref = useRef(null);
@@ -46,7 +47,7 @@ export function SolutionsSection() {
             color: '#223B73',
           }}
         >
-          Giải pháp của chúng tôi
+          GIẢI PHÁP CỦA CHÚNG TÔI
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
